@@ -101,4 +101,66 @@ public class Person {
         System.out.println(max.vorname + " " + max.nachname +
                 "  Geburtsjahr: " + max.geburtsjahr +" , Plz: " + max.postleitzahl);
     }
+
+    //------------BUILDER____________________________________________//
+
+/*
+Exception in thread "main" java.lang.StackO
+
+    public static class Builder {
+
+        String vorname;
+        String nachname;
+        int geburtsjahr;
+        int postleitzahl;
+
+
+
+        public Builder vorname(String vorname){
+            this.vorname=vorname;
+            return this;
+        }
+
+        public Builder nachname(String nachname){
+            this.nachname=nachname;
+            return this;
+        }
+        public Builder geburtsjahr(int geburtsjahr){
+            this.geburtsjahr=geburtsjahr;
+            return this;
+        }
+        public Builder postleitzahl(int postleitzahl){
+            this.postleitzahl=postleitzahl;
+            return this;
+        }
+
+
+        public Person build() {
+            return new Person(this);
+        }
+    }
+
+    private Person(Builder builder) {
+        vorname = builder.vorname;
+        nachname = builder.nachname;
+        geburtsjahr = builder.geburtsjahr;
+        postleitzahl = builder.postleitzahl;
+    }
+
+
+Person p = new Person.Builder()
+        .vorname("Joe")
+        .nachname("Doe")
+        .geburtsjahr(1960)
+        .postleitzahl(12345)
+        .build();
+*/
+
 }
+
+
+
+
+
+
+
