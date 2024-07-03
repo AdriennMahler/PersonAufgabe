@@ -6,6 +6,7 @@ public class Person {
      int postleitzahl;
 
 
+
     //----------------toString überschreiben---------------------------//
 
     public String toString(){
@@ -21,7 +22,7 @@ public class Person {
         }
         String vorname1=this.vorname;
         String vorname2=((Person)obj).vorname;
-        return vorname1==vorname2;
+        return vorname1.equals(vorname2);
     }
 
 
@@ -69,6 +70,12 @@ public class Person {
         return postleitzahl;
     }
 
+    //-----------------------GETMUSTERMANN_____________________________________//
+
+    public static Person getMustermann(){
+        return new Person("Max", "Mustermann", 1960,12345);
+    }
+
     //------------------SETTER METHODS----------------------//
 
     public void setVorname(String vorname) {
@@ -89,7 +96,7 @@ public class Person {
 
     //----------------MUSTERMANN STATIC METHODE-----------------//
 
-    public static void getMustermann(Person max){
+    public static void printMustermann(Person max){
 
         System.out.println(max.vorname + " " + max.nachname +
                 "  Geburtsjahr: " + max.geburtsjahr +" , Plz: " + max.postleitzahl);

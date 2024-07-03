@@ -3,25 +3,27 @@ public class Main {
 
     public static void main(String[] args) {
 
+ //----------------------Aufruf getMustermann static method-------------------------//
 
+       System.out.println("Ergebnis static getMethode: " + Person.getMustermann());
 
 //--------------Person Objekt 1 - Mary----------//
-        Person Mary = new Person();
+        Person mary = new Person();
 
-        System.out.println(Mary);  //toString print Mary Objekt instance Variablen
+        System.out.println(mary);  //toString print Mary Objekt instance Variablen
 
 //------------Person Objekt 2 Frank--------------//
-        Person Frank = new Person(
+        Person frank = new Person(
                 "Frank",
                 "Sinatra",
                 1915,
                 11122334
         );
-        System.out.println(Frank);
+        System.out.println(frank);
 
 //---------------Person Objekt 3 Bob---------------//
-        Person Bob = new Person(1945);
-        System.out.println(Bob);
+        Person bob = new Person(1945);
+        System.out.println(bob);
 
 //----------------Person 4 Max-------------------//
         Person max = new Person();
@@ -30,14 +32,14 @@ public class Main {
         max.geburtsjahr=1960;
         max.postleitzahl=12345;
 
-        Person.getMustermann(max);
+        Person.printMustermann(max);
 
 //---------------equals Methode-------------------//
-        boolean resultMF = Mary.equals(Frank);
+        boolean resultMF = mary.equals(frank);
         System.out.println("Mary=Frank? " + resultMF);
-        boolean resultBM = Bob.equals(Mary);
+        boolean resultBM = bob.equals(mary);
         System.out.println("Bob=Mary? " + resultBM);
-        boolean resultBF = Bob.equals(Frank);
+        boolean resultBF = bob.equals(frank);
         System.out.println("Bob=Frank? " + resultBF);
     }
 
