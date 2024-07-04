@@ -42,5 +42,15 @@ public class Main {
         boolean resultBF = bob.equals(frank);
         System.out.println("Bob=Frank? " + resultBF);
     }
+    //------------------BUILDER-------------------------//
+
+ Person a = new PersonenBuilder()
+         .vorname("Joe")
+         .nachname("Doe")
+         .geburtsjahr(1960)
+         .postleitzahl(12345)
+         .build();
+
+        System.out.println(a);
 
 }

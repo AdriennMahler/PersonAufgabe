@@ -20,9 +20,15 @@ public class Person {
         if(!(obj instanceof Person)){
             return false;
         }
-        String vorname1=this.vorname;
+       /* String vorname1=this.vorname;
         String vorname2=((Person)obj).vorname;
-        return vorname1.equals(vorname2);
+        return vorname1.equals(vorname2);*/
+        Person p1=this;
+        Person p2= (Person)obj;
+        return vorname.equals(p2.vorname)
+                && p1.nachname.equals(p2.nachname)
+                && p1.geburtsjahr==p2.geburtsjahr
+                && p1.postleitzahl == p2.postleitzahl;
     }
 
 
